@@ -31,7 +31,7 @@ const rotateScale = overload((data, e) => e.type, {
         data.a0     = toPolar([e.clientX - centre.x, e.clientY - centre.y])[1];
         data.t0     = fourthsIndexes.indexOf(scale.transpose || 0);
 
-        circleDiv.classList.add('gesturing');
+        //circleDiv.classList.add('gesturing');
         return data;
     },
 
@@ -53,7 +53,7 @@ const rotateScale = overload((data, e) => e.type, {
 
     default: (data, e) => {
         const { scale, circleDiv } = data;
-        circleDiv.classList.remove('gesturing');
+        //circleDiv.classList.remove('gesturing');
     }
 });
 
