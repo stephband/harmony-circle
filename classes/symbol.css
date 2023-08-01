@@ -1,0 +1,83 @@
+
+.symbol {
+    display: inline-block;
+    line-height: 0.66666667em;
+}
+
+/*
+.flat-symbol {
+    width: 0.75em;
+    margin-left: -0.25em;
+}
+
+.sharp-symbol {
+    width: 0.9em;
+    margin-left: -0.1em;
+}
+*/
+
+sup.symbol {
+    vertical-align: 0.5em;
+}
+
+sup.flat-symbol,
+sup.sharp-symbol {
+    vertical-align: 0.4em;
+}
+
+sup.hdim-symbol {
+    vertical-align: 0.36em;
+}
+
+.maj-symbol {
+    font-size: 0.85em;
+    vertical-align: -0.04em;
+}
+
+.maj-symbol + .aug-symbol {
+    margin-left: -0.3em;
+}
+
+.maj-symbol + .sharp-symbol {
+    margin-left: -0.2em;
+}
+
+.min-symbol {
+    font-size: 0.96em;
+}
+
+.min-symbol + .maj-symbol {
+    margin-left: -0.1em;
+}
+
+.num-symbol {
+    font-size: 0.59em;
+}
+
+.num-symbol + .sus-symbol,
+.num-symbol + .alt-symbol {
+    margin-left: -0.1em;
+}
+
+.flat-symbol,
+.sharp-symbol {
+    font-size: 0.8em;
+}
+
+.alt-symbol,
+.sus-symbol {
+    font-size: 0.6em;
+}
+
+.sus-symbol + .flat-symbol {
+    margin-left: -0.1em;
+}
+
+.hdim-symbol {
+    font-size: 0.8em;
+}
+
+.aug-symbol {
+    font-size: 0.6em;
+    margin-right: -0.075em;
+}

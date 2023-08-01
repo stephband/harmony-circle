@@ -1,0 +1,89 @@
+
+.pentatonic {
+    color:  rgb(108, 228, 186);
+    stroke: rgb(0, 180, 118);
+    fill:   rgba(0, 116, 76, 0.522);
+}
+
+.major {
+    color:  rgb(210, 228, 108);
+    stroke: rgb(154, 180, 0);
+    fill:   rgba(100, 116, 0, 0.522);
+}
+
+.melodic-minor {
+    color:  rgb(255, 222, 87);
+    stroke: rgb(221, 177, 0);
+    fill:   rgba(177, 142, 0, 0.447);
+}
+
+.diminished-arp {
+    color:  rgb(249, 184, 98);
+    stroke: rgb(251, 144, 0);
+    fill:   rgba(174, 99, 0, 0.502);
+}
+
+.diminished {
+    color:  rgb(246, 157, 97);
+    stroke: rgb(251, 101, 0);
+    fill:   rgba(174, 69, 0, 0.502);
+}
+
+.augmented-arp {
+    color:  rgb(79, 226, 255);
+    stroke: rgb(0, 175, 210);
+    fill:   rgba(0, 124, 148, 0.6);
+}
+
+.whole-tone {
+    color:  rgb(50, 187, 254);
+    stroke: rgb(0, 169, 255);
+    fill:   rgba(0, 132, 199, 0.585);
+}
+
+.harmonic-minor {
+    color:  rgb(213, 190, 98);
+    stroke: rgb(221, 177, 0);
+    fill:   rgba(177, 142, 0, 0.447);
+}
+
+
+.on[value="pentatonic"] {
+    color:  rgb(108, 228, 186);
+    background-color: rgba(0, 116, 76, 0.522);
+}
+
+.on[value="major"] {
+    color:  rgb(210, 228, 108);
+    background-color: rgba(100, 116, 0, 0.522);
+}
+
+.on[value="melodic-minor"] {
+    color:  rgb(255, 222, 87);
+    background-color: rgba(177, 142, 0, 0.447);
+}
+
+.on[value="harmonic-minor"] {
+    color:  rgb(213, 190, 98);
+    background-color: rgba(177, 142, 0, 0.447);
+}
+
+.on[value="diminished-arp"] {
+    color:  rgb(249, 184, 98);
+    background-color: rgba(174, 99, 0, 0.502);
+}
+
+.on[value="diminished"] {
+    color:  rgb(246, 157, 97);
+    background-color: rgba(174, 69, 0, 0.502);
+}
+
+.on[value="augmented-arp"] {
+    color:  rgb(54, 207, 237);
+    background-color: rgba(0, 124, 148, 0.6);
+}
+
+.on[value="whole-tone"] {
+    color:  rgb(50, 187, 254);
+    background-color: rgba(0, 132, 199, 0.585);
+}

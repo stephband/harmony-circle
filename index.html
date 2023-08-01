@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Literal</title>
+
+    <meta charset="utf-8" />
+    <meta name="author" content="Stephen Band" />
+    <meta name="description" content="Literal enhances HTML templates with JS literal template tags, and provides a declarative way of creating custom elements, all in a small library weighing in at 15kB minified and gzipped." />
+    <meta name="viewport" content="width=device-width" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@stephband">
+    <meta property="og:title" content="Literal" />
+    <meta property="og:description" content="Literal enhances HTML templates with JS literal template tags, and provides a declarative way of creating custom elements, all in a small library weighing in at 15kB minified and gzipped." />
+    <meta property="og:image" content="undefined" />
+    <meta property="og:url" content="https://stephen.band/literal" />
+
+    <link rel="stylesheet" href="./module.css" />
+
+    <script title="load">
+        document.documentElement.className += ' js loading';
+        // window.addEventListener('DOMContentLoaded', () => document.documentElement.classList.remove('content-loading'));
+        // Wait for other load handlers to run first - Bolt does a few things on
+        // load (eg. targetable scrolls) and we want them to run before the loading
+        // class is removed
+        window.addEventListener('load', () => window.requestAnimationFrame(() => document.documentElement.classList.remove('loading')));
+    </script>
+
+    <script title="config">
+        window.DEBUG = true;
+    </script>
+
+    <template is="literal-element" tag="harmony-circle" src="./harmony-circle/module.js">
+        <link rel="stylesheet" href="./harmony-circle/module.css" />
+
+        <div class="circle-block block" id="circle">
+            <svg viewbox="-10 -10 20 20">
+                <path class="scale-path" id="scale-path"></path>
+            </svg>
+
+            <button type="button" class="note-button" name="note" value="0">C</button>
+            <button type="button" class="note-button" name="note" value="5">F</button>
+            <button type="button" class="note-button" name="note" value="10"><span class="note-text" style="font-size: 0.97em;">B<sup class="flat-symbol symbol">♭</sup></span><span class="spacer"></span><span class="note-text" style="font-size: 0.52em;">A<sup class="sharp-symbol symbol">♯</sup></span></button>
+            <button type="button" class="note-button" name="note" value="3"><span class="note-text" style="font-size: 0.94em;">E<sup class="flat-symbol symbol">♭</sup></span><span class="spacer"></span><span class="note-text" style="font-size: 0.76em;">D<sup class="sharp-symbol symbol">♯</sup></span></button>
+            <button type="button" class="note-button" name="note" value="8"><span class="note-text" style="font-size: 0.88em;">A<sup class="flat-symbol symbol">♭</sup></span><span class="spacer"></span><span class="note-text" style="font-size: 0.88em;">G<sup class="sharp-symbol symbol">♯</sup></span></button>
+            <button type="button" class="note-button" name="note" value="1"><span class="note-text" style="font-size: 0.76em;">D<sup class="flat-symbol symbol">♭</sup></span><span class="spacer"></span><span class="note-text" style="font-size: 0.94em;">C<sup class="sharp-symbol symbol">♯</sup></span></button>
+            <button type="button" class="note-button" name="note" value="6"><span class="note-text" style="font-size: 0.52em;">G<sup class="flat-symbol symbol">♭</sup></span><span class="spacer"></span><span class="note-text" style="font-size: 0.97em;">F<sup class="sharp-symbol symbol">♯</sup></span></button>
+            <button type="button" class="note-button" name="note" value="11">B</button>
+            <button type="button" class="note-button" name="note" value="4">E</button>
+            <button type="button" class="note-button" name="note" value="9">A</button>
+            <button type="button" class="note-button" name="note" value="2">D</button>
+            <button type="button" class="note-button" name="note" value="7">G</button>
+        </div>
+
+        <div class="settings-block block" id="settings">
+            <h2 class="text-09">Scales </h2>
+            <input type="checkbox" class="invisible" id="advanced-settings" />
+            <label class="right-switch-label switch-label text-09" for="advanced-settings">Advanced</label>
+
+            <button type="button" class="scale-button button" name="scale" value="none" disabled id="clear-scale">Clear</button>
+            <button type="button" class="scale-button button flex" name="scale" value="pentatonic">Pentatonic</button>
+            <button type="button" class="scale-button button flex" name="scale" value="major">Major <span>△</span></button>
+            <button type="button" class="scale-button button flex checked-shown" name="scale" value="melodic-minor">Melodic min <span>–△</span></button>
+            <button type="button" class="scale-button button flex" style="grid-row: 3;" name="scale" value="diminished-arp">Diminished <span>°</span></button>
+            <button type="button" class="scale-button button flex" style="grid-row: 4;" name="scale" value="diminished">Diminished 7 <span>°7</span></button>
+            <button type="button" class="scale-button button flex" style="grid-row: 3" name="scale" value="augmented-arp">Augmented <span>＋</span></button>
+            <button type="button" class="scale-button button flex" style="grid-row: 4" name="scale" value="whole-tone">Whole tone <span>＋7</span></button>
+
+            <button type="button" class="scale-button button flex checked-shown" style=" grid-column: 2; grid-row: 5;" name="scale" value="harmonic-minor">Harmonic min</button>
+            <button type="button" class="scale-button button flex checked-shown" style=" grid-column: 2; grid-row: 6;" name="scale" value="double-harmonic-minor">Double harmonic min</button>
+            <button type="button" class="scale-button button flex checked-shown" style=" grid-column: 3; grid-row: 5;" name="scale" value="harmonic-major">Harmonic maj</button>
+            <button type="button" class="scale-button button flex checked-shown" style=" grid-column: 3; grid-row: 6;" name="scale" value="double-harmonic-major">Double harmonic maj</button>
+        </div>
+    </template>
+</head>
+
+<body class="">
+    <harmony-circle></harmony-circle>
+
+    <footer>
+        <p class="text-09">Harmony Circle by <a href="https://stephen.band">stephband</a>. Repo on <a href="https://github.com/stephband/harmony-circle/">GitHub</a>.</p>
+    </footer>
+
+    <script type="module">
+        import '../literal/literal-element/module.js';
+    </script>
+</body>
+</html>
