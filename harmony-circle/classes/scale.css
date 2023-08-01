@@ -42,9 +42,27 @@
 }
 
 .harmonic-minor {
-    color:  rgb(213, 190, 98);
-    stroke: rgb(221, 177, 0);
-    fill:   rgba(177, 142, 0, 0.447);
+    color:  rgb(205, 141, 255);
+    stroke: rgb(152, 20, 255);
+    fill:   rgba(112, 0, 199, 0.523);
+}
+
+.double-harmonic-minor {
+    color:  rgb(239, 144, 255);
+    stroke: rgb(204, 0, 237);
+    fill:   rgba(159, 0, 184, 0.51);
+}
+
+.harmonic-major {
+    color:  rgb(255, 157, 242);
+    stroke: rgb(215, 0, 185);
+    fill:   rgba(182, 0, 157, 0.503);
+}
+
+.double-harmonic-major {
+    color:  rgb(255, 168, 220);
+    stroke: rgb(221, 0, 132);
+    fill:   rgba(183, 0, 109, 0.504);
 }
 
 
@@ -60,11 +78,6 @@
 
 .on[value="melodic-minor"] {
     color:  rgb(255, 222, 87);
-    background-color: rgba(177, 142, 0, 0.447);
-}
-
-.on[value="harmonic-minor"] {
-    color:  rgb(213, 190, 98);
     background-color: rgba(177, 142, 0, 0.447);
 }
 
@@ -86,4 +99,24 @@
 .on[value="whole-tone"] {
     color:  rgb(50, 187, 254);
     background-color: rgba(0, 132, 199, 0.585);
+}
+
+.on[value="harmonic-minor"] {
+    color:  rgb(205, 141, 255);
+    background-color: rgba(112, 0, 199, 0.523);
+}
+
+.on[value="double-harmonic-minor"] {
+    color:  rgb(239, 144, 255);
+    background-color: rgba(159, 0, 184, 0.51);
+}
+
+.on[value="harmonic-major"] {
+    color:  rgb(255, 157, 242);
+    background-color: rgba(182, 0, 157, 0.503);
+}
+
+.on[value="double-harmonic-major"] {
+    color:  rgb(255, 168, 220);
+    background-color: rgba(183, 0, 109, 0.504);
 }
