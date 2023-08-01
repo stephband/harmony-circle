@@ -1,0 +1,12 @@
+{
+    "name": "My PWA",
+    "description": "An interactive cycle-of-fourths scale visualiser",
+    "icons": [{
+        "src": "images/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+    }],
+    "start_url": "https://stephen.band/harmony-circle/",
+    "display": "standalone",
+    "background_color": "#25193e"
+}
