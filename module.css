@@ -5,12 +5,10 @@
 @import '../bolt/classes/button.css';
 
 :root {
-    overscroll-behavior: contain;
     background-color: rgb(58, 43, 91);
 }
 
 body {
-    overscroll-behavior: contain;
     display: flex;
     flex-direction: column;
 }
