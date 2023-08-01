@@ -23,6 +23,7 @@
 :host > .circle-block {
     position: relative;
     display: block;
+    touch-action: none;
 }
 
 :host > .settings-block {
