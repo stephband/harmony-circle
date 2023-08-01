@@ -1,6 +1,6 @@
-@import '../../bolt/elements/focus.css';
-@import '../../bolt/elements/html.css';
-@import '../../bolt/classes/button.css';
+@import '../bolt/elements/focus.css';
+@import '../bolt/elements/html.css';
+@import '../bolt/classes/button.css';
 
 :root {
     background-color: rgb(58, 43, 91);

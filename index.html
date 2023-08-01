@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Literal</title>
+    <title>Harmony Circle</title>
 
     <meta charset="utf-8" />
     <meta name="author" content="Stephen Band" />
-    <meta name="description" content="Literal enhances HTML templates with JS literal template tags, and provides a declarative way of creating custom elements, all in a small library weighing in at 15kB minified and gzipped." />
+    <meta name="description" content="An interactive cycle-of-fourths harmony visualiser" />
     <meta name="viewport" content="width=device-width" />
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@stephband">
-    <meta property="og:title" content="Literal" />
-    <meta property="og:description" content="Literal enhances HTML templates with JS literal template tags, and provides a declarative way of creating custom elements, all in a small library weighing in at 15kB minified and gzipped." />
-    <meta property="og:image" content="undefined" />
-    <meta property="og:url" content="https://stephen.band/literal" />
+    <meta property="og:title" content="Harmony Circle" />
+    <meta property="og:description" content="An interactive cycle-of-fourths harmonic visualiser" />
+    <meta property="og:image" content="https://stephen.band/harmony-circle/images/screenshot.jpg" />
+    <meta property="og:url" content="https://stephen.band/harmony-circle" />
 
-    <link rel="stylesheet" href="./module.css" />
+    <link rel="stylesheet" href="./build/module.css" />
 
     <script title="load">
         document.documentElement.className += ' js loading';
@@ -26,15 +26,16 @@
         window.addEventListener('load', () => window.requestAnimationFrame(() => document.documentElement.classList.remove('loading')));
     </script>
 
-    <script title="config">
+    <!--script title="config">
         window.DEBUG = true;
-    </script>
+    </script-->
 
-    <template is="literal-element" tag="harmony-circle" src="./harmony-circle/module.js">
-        <link rel="stylesheet" href="./harmony-circle/module.css" />
+    <template is="literal-element" tag="harmony-circle" src="./build/harmony-circle/module.js">
+        <link rel="stylesheet" href="./build/harmony-circle/module.css" />
 
         <div class="circle-block block" id="circle">
             <svg viewbox="-10 -10 20 20">
+                <title>Drag to transpose</title>
                 <path class="scale-path" id="scale-path"></path>
             </svg>
 
@@ -81,8 +82,6 @@
         <p class="text-09">Harmony Circle by <a href="https://stephen.band">stephband</a>. Repo on <a href="https://github.com/stephband/harmony-circle/">GitHub</a>.</p>
     </footer>
 
-    <script type="module">
-        import '../literal/literal-element/module.js';
-    </script>
+    <script type="module" src="./build/module.js"></script>
 </body>
 </html>
