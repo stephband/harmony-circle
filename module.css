@@ -11,10 +11,15 @@
 body {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+body > harmony-circle:focus {
+    outline: none !important;
 }
 
 body > footer {
-    margin-top: auto;
+    margin-top: 0.9375rem;
     padding: 0.5625rem;
 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
