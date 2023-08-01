@@ -171,6 +171,10 @@
 .scale-path
 **/
 
+.scale-path {
+    touch-action: none;
+}
+
 .scale-path:focus-visible {
     stroke: white;
 }
